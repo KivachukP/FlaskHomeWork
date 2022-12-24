@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css')}}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<header>
+
+    <div class="topnav">
+        <a href="/">Home</a><
+        <a href="/blog">Blog</a>
+        <a href="/contacts">Contact</a>
+        <a href="/create-article" style="float:right">Create posts</a>
+        <a href="/login" style="float:right">Login</a>
+    </div>
+</header>
+<body id="body">
+{% block body %}
+
+
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'main.html'%}
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+{% block body %}
+    <div class="row:after">
+        <h1>{{ article.title}}</h1>
+        <div class="card">
+            <p>{{ article.text }}</p>
+            <p>{{ article.info }}</p>
+            <p><b>Дата:{{ article.date.date() }}</b></p>
+            <a href="/blog/{{ article.id }}/delete" class="button button1">Удалить</a>
+            <a href="/blog/{{ article.id }}/update" class="button button1">Редактировать</a>
+        </div>
+
+
+    </div>
+
+{% endblock %}

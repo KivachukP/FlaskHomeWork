@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block title %}Blog page{% endblock %}
+
+{% block body %}
+
+
+
+
+  <h2>On this page you can see blog posts</h2>
+  <h3>Try press button "Create posts" for add a new posts</h3>
+
+
+    <div class="row">
+        <h1>Все статьи на сайте</h1>
+
+        {% if articles|length > 0 %}
+
+        {% for el in articles %}
+        <div class="leftcolumn">
+            <div class="card">
+              <h2>{{ el.title }}</h2>
+              <p>{{ el.intro }}</p>
+              <p><b>Дата:{{ el.date.date() }}</b></p>
+              <a href="/blog/{{ el.id }}" class="button button1">Детальнее</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>У нас еще нет статей на сайте</p>
+        {% endif %}
+    </div>
+
+{% endblock %}

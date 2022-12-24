@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% block title %}
+Create article
+{% endblock %}
+
+{% block body %}
+<h1>Добавление статьи</h1>
+<form method="post">
+<input type="text" name="title" id="title" class="textarea" placeholder="Введите название статьи"></input><br>
+<textarea  name="intro" id="intro"  placeholder="Введите анонс"></textarea><br>
+<textarea name="text" id="text"  placeholder="Введите основной текст"></textarea><br>
+<input type="submit" class="button button1" value="Отправить">
+</form>
+{% endblock %}
